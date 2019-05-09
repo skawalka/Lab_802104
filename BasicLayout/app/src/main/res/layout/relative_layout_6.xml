@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/textH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A New Filpboard"
+            android:textSize="28dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Reimagined, with over\n
+300,000 new topics"
+            android:textColor="#ffffff"
+            android:layout_below="@id/textH"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="GET STARTED"
+            android:textSize="18dp"
+            android:background="#e61730"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="skip"
+            android:background="0"
+            android:textColor="#b1b1b1"
+            android:layout_below="@+id/btnSubmit"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By Continuing. you accept theTterm Of Use and Pricacy Policy"
+            android:textSize="12dp"
+            android:textColor="#b1b1b1"
+            android:layout_below="@id/btnSkip"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

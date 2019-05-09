@@ -3,25 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="#ff0000"
-        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="#ffff00"
-        android:layout_toRightOf="@id/view1"/>
+        <View
+            android:id="@+id/view1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#ff0000"
+            />
 
-    <View
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="#00ff00"
-        android:layout_below="@id/view2"
-        android:layout_alignLeft="@id/view2"/>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#ffff00"
+            android:layout_toRightOf="@id/view1"/>
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00ff00"
+            android:layout_below="@id/view2"
+            android:layout_alignLeft="@id/view2"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

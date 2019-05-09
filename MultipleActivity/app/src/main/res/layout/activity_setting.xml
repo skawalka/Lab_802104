@@ -5,24 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingActivity"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:gravity="center|top"
+    android:paddingTop="20dp">
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnRed"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Red"
         android:textColor="#ffffff"
         android:backgroundTint="#ff0000"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnGreen"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Green"
         android:textColor="#ffffff"
         android:backgroundTint="#00ff00"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnBlue"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Blue"
         android:textColor="#ffffff"

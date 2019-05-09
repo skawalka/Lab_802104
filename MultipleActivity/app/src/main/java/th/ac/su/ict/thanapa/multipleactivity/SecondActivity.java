@@ -16,12 +16,14 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        //------- SET VALUE ON UI ----------------------------------------------
         tv1 = findViewById(R.id.tv1);
         tv2 = findViewById(R.id.tv2);
         tv3 = findViewById(R.id.tv3);
         btnBack = findViewById(R.id.btnBack);
         btnNew = findViewById(R.id.btnNew);
 
+        //------- EVENT FUNCTION -----------------------------------------------
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("student");
         String name = bundle.getString("name");
@@ -42,13 +44,13 @@ public class SecondActivity extends AppCompatActivity {
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (v == R.id.btnBack){
+            if (v == btnBack){
                 finish();
             }
-            if (v == R.id.btnNew){
+            if (v == btnNew){
                 Intent intent = new Intent(SecondActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         }
-    }
+    };
 }

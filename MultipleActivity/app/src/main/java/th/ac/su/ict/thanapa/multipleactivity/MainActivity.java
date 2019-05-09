@@ -2,6 +2,7 @@ package th.ac.su.ict.thanapa.multipleactivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -64,11 +65,19 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings){
-            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            Intent intent = new Intent(MainActivity.this, SettingActivity.class);
             startActivity(intent);
             startActivityForResult(intent, SETTING_ACTIVITY_REQUEST_CODE);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SETTING_ACTIVITY_REQUEST_CODE) {
+            Toast.makeText(MainActivity.this, data.getStringExtra("selected_color"), Toast.LENGTH_LONG).show();
+        }
     }
 
     private void hideKeyboard(View vie){
